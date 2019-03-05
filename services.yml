@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  gowebapisvc
+spec:
+  selector:
+    app:  gowebapi
+  type:  NodePort 
+  ports:
+  - name:  gowebapiport
+    port:  9001
+    targetPort:  9001
+    nodePort : 30001
+    protocol : TCP

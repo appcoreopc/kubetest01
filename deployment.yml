@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gowebapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gowebapi
+    spec:
+      containers:
+      - name: kepunggomux1
+        image: kepung/gomux1
+        ports:
+        - containerPort:  9001
+          name:  my-name
